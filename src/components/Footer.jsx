@@ -4,7 +4,7 @@ import { InstagramIcon } from './InstagramIcon';
 import { agencyInfo } from '../data/kankoData';
 import './Footer.css';
 
-const Footer = ({ onOpenContact, onSelectModal }) => {
+const Footer = ({ onOpenContact, onSelectModal, onOpenLegal, onOpenCookieSettings }) => {
   return (
     <footer className="kanko-footer">
       <div className="container">
@@ -108,14 +108,49 @@ const Footer = ({ onOpenContact, onSelectModal }) => {
 
         </div>
 
-        {/* Barra de copyright */}
+        {/* Barra accesible de enlaces legales y cumplimiento normativo */}
+        <nav className="footer-legal-bar" aria-label="Enlaces Legales y Normativos">
+          <ul className="legal-links-list">
+            <li>
+              <button type="button" className="footer-legal-link" onClick={() => onOpenLegal && onOpenLegal('avisoLegal')}>
+                Aviso Legal
+              </button>
+            </li>
+            <li className="legal-sep">•</li>
+            <li>
+              <button type="button" className="footer-legal-link" onClick={() => onOpenLegal && onOpenLegal('privacidad')}>
+                Política de Privacidad
+              </button>
+            </li>
+            <li className="legal-sep">•</li>
+            <li>
+              <button type="button" className="footer-legal-link" onClick={() => onOpenLegal && onOpenLegal('cookies')}>
+                Política de Cookies
+              </button>
+            </li>
+            <li className="legal-sep">•</li>
+            <li>
+              <button type="button" className="footer-legal-link" onClick={() => onOpenLegal && onOpenLegal('terminos')}>
+                Términos de Contratación & Cancelación
+              </button>
+            </li>
+            <li className="legal-sep">•</li>
+            <li>
+              <button type="button" className="footer-legal-link cookie-config-trigger" onClick={onOpenCookieSettings}>
+                ⚙️ Configurar Cookies
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Barra de copyright y sellos de confianza */}
         <div className="footer-bottom-bar">
           <p className="copyright-text">
-            © {new Date().getFullYear()} Kanko Travel (観光) • Todos los derechos reservados.
+            © {new Date().getFullYear()} Kanko Travel (観光) • Agencia de Viajes. Todos los derechos reservados.
           </p>
           <div className="security-badges">
             <span className="sec-badge"><Shield size={13} /> Pagos Seguros</span>
-            <span className="sec-badge"><Globe size={13} /> Destinos Certificados</span>
+            <span className="sec-badge"><Globe size={13} /> Operador Certificado</span>
           </div>
         </div>
 

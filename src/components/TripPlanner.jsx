@@ -24,12 +24,22 @@ const partySizes = [
   { id: 'grupo', label: 'Familia o Grupo (3+)' }
 ];
 
-const TripPlanner = () => {
+const TripPlanner = ({ onOpenLegal }) => {
   const [selectedDest, setSelectedDest] = useState(destinations[0].id);
   const [selectedDate, setSelectedDate] = useState(dates[0].id);
   const [selectedParty, setSelectedParty] = useState(partySizes[1].id);
+  
+  // Cumplimiento RGPD / Normativo: Casilla sin pre-marcar obligatoria
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleGenerateQuote = () => {
+    if (!privacyAccepted) {
+      setShowError(true);
+      return;
+    }
+    setShowError(false);
+
     const destObj = destinations.find(d => d.id === selectedDest);
     const dateObj = dates.find(d => d.id === selectedDate);
     const partyObj = partySizes.find(p => p.id === selectedParty);
@@ -38,6 +48,7 @@ const TripPlanner = () => {
 📍 Destino: ${destObj?.label}
 🗓️ Fecha estimada: ${dateObj?.label}
 👥 Pasajeros: ${partyObj?.label}
+(He aceptado la Política de Privacidad y Términos en kankotravel.com)
 ¿Podrían compartirme paquetes disponibles y opciones de pago en cuotas?`;
 
     const encoded = encodeURIComponent(message);
@@ -125,6 +136,47 @@ const TripPlanner = () => {
               </div>
             </div>
 
+          </div>
+
+          {/* Casilla obligatoria de cumplimiento RGPD / Privacidad (No pre-marcada) */}
+          <div className="planner-consent-wrapper">
+            <label className={`planner-consent-label ${showError && !privacyAccepted ? 'error' : ''}`}>
+              <input
+                type="checkbox"
+                id="kanko-privacy-check"
+                checked={privacyAccepted}
+                onChange={(e) => {
+                  setPrivacyAccepted(e.target.checked);
+                  if (e.target.checked) setShowError(false);
+                }}
+                className="planner-checkbox"
+                required
+              />
+              <span className="consent-text">
+                He leído y acepto la{' '}
+                <button
+                  type="button"
+                  className="legal-inline-link"
+                  onClick={() => onOpenLegal && onOpenLegal('privacidad')}
+                >
+                  Política de Privacidad
+                </button>{' '}
+                y los{' '}
+                <button
+                  type="button"
+                  className="legal-inline-link"
+                  onClick={() => onOpenLegal && onOpenLegal('terminos')}
+                >
+                  Términos de Contratación
+                </button>.
+              </span>
+            </label>
+
+            {showError && !privacyAccepted && (
+              <p className="consent-error-msg" role="alert">
+                ⚠️ Por favor marque la casilla para aceptar la Política de Privacidad antes de cotizar.
+              </p>
+            )}
           </div>
 
           {/* Botón de envío a WhatsApp */}

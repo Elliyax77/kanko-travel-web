@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { X, MessageCircle, Phone, Mail, MapPin, Send, Plane } from 'lucide-react';
 import { InstagramIcon } from './InstagramIcon';
 import { agencyInfo } from '../data/kankoData';
 import './ContactModal.css';
 
-const ContactModal = ({ isOpen, onClose }) => {
+const ContactModal = ({ isOpen, onClose, onOpenLegal }) => {
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [showError, setShowError] = useState(false);
+
   if (!isOpen) return null;
 
   const openWhatsApp = (topic) => {
+    if (!privacyAccepted) {
+      setShowError(true);
+      return;
+    }
+    setShowError(false);
+
     let msg = `¡Hola Kanko Travel! 🎌 Me comunico desde su página web para solicitar información sobre ${topic}.`;
     const encoded = encodeURIComponent(msg);
     window.open(`https://wa.me/${agencyInfo.whatsappNumber}?text=${encoded}`, '_blank');
@@ -36,6 +45,34 @@ const ContactModal = ({ isOpen, onClose }) => {
           <p className="contact-card-desc">
             Elige el canal de tu preferencia para conversar de inmediato con nuestros especialistas en viajes.
           </p>
+        </div>
+
+        {/* Casilla obligatoria RGPD para contacto */}
+        <div className="contact-consent-box">
+          <label className={`contact-consent-label ${showError && !privacyAccepted ? 'error' : ''}`}>
+            <input
+              type="checkbox"
+              checked={privacyAccepted}
+              onChange={(e) => {
+                setPrivacyAccepted(e.target.checked);
+                if (e.target.checked) setShowError(false);
+              }}
+              className="contact-checkbox"
+            />
+            <span className="contact-consent-text">
+              Acepto el tratamiento de mis datos de contacto conforme a la{' '}
+              <button
+                type="button"
+                className="legal-inline-link"
+                onClick={() => onOpenLegal && onOpenLegal('privacidad')}
+              >
+                Política de Privacidad
+              </button>.
+            </span>
+          </label>
+          {showError && !privacyAccepted && (
+            <p className="contact-error-msg">⚠️ Debes marcar la casilla para iniciar el chat</p>
+          )}
         </div>
 
         <div className="contact-options-list">
