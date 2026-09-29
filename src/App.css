@@ -4,10 +4,16 @@
   flex-direction: column;
   background-color: transparent;
   position: relative;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
 
 main {
   flex: 1;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* Espaciador para la barra inferior fija en móvil */
@@ -16,3 +22,4 @@ main {
     padding-bottom: 74px;
   }
 }
+

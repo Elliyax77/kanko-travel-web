@@ -350,3 +350,17 @@
   flex-shrink: 0;
   padding: 0.85rem 1.8rem;
 }
+
+@media (max-width: 640px) {
+  .kanko-quote-banner {
+    padding: 1.6rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .banner-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+

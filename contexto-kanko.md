@@ -128,6 +128,8 @@ kanko-travel-web/
 - **Identidad de Kanko:** Distinguirse totalmente de InspiraViaje. Kanko utiliza Rojo Torii Carmesí, Negro Tinta Sumi y Blanco Seda con toques dorados, evocando precisión, lujo y viaje internacional.
 - **Tipografías:** Siempre **Outfit** para encabezados y **Plus Jakarta Sans** para cuerpo.
 - **Ubicación del botón de acción en imágenes:** Siempre en la **parte inferior izquierda**.
-- **Mobile-First:** Botones generosos (mínimo 44px de altura), soporte para gestos táctiles (swipe), sin recortes indeseados de texto y barra fija inferior en móviles.
+- **Mobile-First & Bloqueo Horizontal Estricto:** Botones generosos (mínimo 44px de altura), soporte para gestos táctiles (swipe), sin recortes indeseados de texto y barra fija inferior en móviles. Aplicar rigurosamente `overflow-x: hidden` en `html` y `body`, y `overflow-x: clip` en contenedores maestros: la navegación en teléfonos móviles es estrictamente vertical (arriba y abajo), con cero desplazamiento lateral.
+- **Preservación intacta del diseño de computadora:** Cualquier ajuste, media query o regla de adaptación para celulares debe restringirse a `@media (max-width: ...)` sin modificar bajo ninguna circunstancia el diseño o dimensiones de la versión de escritorio (`@media (min-width: 1024px)`).
 - **Vanilla CSS modular:** Sin Tailwind CSS. Todo ordenado en archivos `.css` limpios por componente.
 - **Cumplimiento legal y privacidad digital:** NINGUNA casilla de consentimiento puede estar pre-marcada (Reglamento UE 2016/679 / RGPD Sentencia Planet49). El banner de cookies debe ofrecer opciones simétricas de aceptación y rechazo. La configuración de cookies debe permanecer accesible en todo momento desde el pie de página.
+
