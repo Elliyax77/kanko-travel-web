@@ -48,7 +48,7 @@ Inspirada en el isotipo oficial con el Kanji rojo **旅** (*Tabi*, travesía/via
 ```
 kanko-travel-web/
 ├── public/
-│   ├── kanko-logo.jpg           ← Logotipo oficial completo Kanko Travel con avión y kanji rojo
+│   ├── kanko-logo.png           ← Logotipo oficial horizontal Kanko Travel (globo terráqueo a la izquierda y texto a la derecha)
 │   ├── kanko-isotype.jpg        ← Isotipo circular oficial (kanji rojo 旅 en globo terráqueo)
 │   ├── favicon.png              ← Isotipo para favicon del navegador
 │   └── favicon.ico              ← Icono ICO para compatibilidad
@@ -82,7 +82,7 @@ kanko-travel-web/
 
 ## Secciones y Elementos de la Web (en orden de navegación)
 1. **Header Kanko:**
-   - Logotipo oficial de Kanko Travel a la izquierda: recortado de márgenes blancos y ampliado (88px en desktop / 70px en smartphones y 68px/54px en modo scrolled) para un impacto visual imponente y legible.
+   - Logotipo oficial horizontal Kanko Travel a la izquierda: disposición panorámica (~2.5:1) con isotipo a la izquierda y tipografía a la derecha (60px en desktop / 48px en smartphones y 48px/40px en modo scrolled), integrándose de forma limpia y estilizada.
    - A la derecha: Botón directo Carmesí de **Cotizar Viaje** + Botón de Menú circular estilizado.
    - Algoritmo de scroll estabilizado con histéresis (compacta a 60px y expande a 15px, con `overflow-anchor: none`).
 2. **CategoryBar (Barra de Categorías Swipeable):**

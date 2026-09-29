@@ -38,7 +38,7 @@ const Header = ({ onOpenContact, onOpenMenu, onScrollToSection }) => {
         {/* Logo oficial Kanko Travel a la izquierda */}
         <a href="#" className="kanko-logo-link" aria-label="Kanko Travel Inicio">
           <img 
-            src="/kanko-logo.jpg?v=2" 
+            src="/kanko-logo.png?v=3" 
             alt="Kanko Travel Agencia de Viajes" 
             className="kanko-logo-img" 
           />
