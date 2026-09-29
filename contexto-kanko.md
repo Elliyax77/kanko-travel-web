@@ -60,7 +60,7 @@ kanko-travel-web/
 │   ├── data/
 │   │   └── kankoData.js         ← Base de datos local (slides, paquetes, categorías, full days, pagos, seguros, FAQ)
 │   └── components/
-│       ├── Header.jsx / .css        ← Encabezado sticky anti-parpadeo con logo Kanko, estatus de atención, botón de cotizar y menú
+│       ├── Header.jsx / .css        ← Encabezado sticky anti-parpadeo con logo Kanko, botón de cotizar y menú circular
 │       ├── CategoryBar.jsx / .css   ← Barra horizontal swipeable con categorías rápidas (Todos, Japón, Europa, Caribe, Full Days, Vuelos)
 │       ├── HeroSlider.jsx / .css    ← Slider panorámico (16:9 desktop / 4:3 móvil min 360px) con swipe táctil, precios y botón obligatorio abajo-izquierda
 │       ├── TripPlanner.jsx / .css   ← Cotizador interactivo en 3 pasos con generación automática de mensaje para WhatsApp
@@ -83,8 +83,7 @@ kanko-travel-web/
 ## Secciones y Elementos de la Web (en orden de navegación)
 1. **Header Kanko:**
    - Logotipo oficial de Kanko Travel a la izquierda.
-   - Badge central de pulso verde: *"Asesoría Internacional Activa"*.
-   - Botón directo Carmesí de **Cotizar Viaje** + Botón de Menú circular estilizado.
+   - A la derecha: Botón directo Carmesí de **Cotizar Viaje** + Botón de Menú circular estilizado.
    - Algoritmo de scroll estabilizado con histéresis (compacta a 60px y expande a 15px, con `overflow-anchor: none`).
 2. **CategoryBar (Barra de Categorías Swipeable):**
    - Acceso inmediato en móviles y desktop a: *Todos, Japón & Asia, Europa, Caribe & Playas, Full Days y Boletos & Visas*.

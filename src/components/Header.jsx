@@ -44,12 +44,6 @@ const Header = ({ onOpenContact, onOpenMenu, onScrollToSection }) => {
           />
         </a>
 
-        {/* Badge central sutil en desktop: Estado de atención */}
-        <div className="header-status-badge">
-          <span className="pulse-dot"></span>
-          <span className="status-text">Asesoría Internacional Activa</span>
-        </div>
-
         {/* Acciones a la derecha: Botón WhatsApp Carmesí + Menú de Opciones */}
         <div className="header-right-actions">
           <button 
