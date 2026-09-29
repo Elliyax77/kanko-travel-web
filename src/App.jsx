@@ -74,17 +74,17 @@ function App() {
         {/* 3. Hero Slider Cinematográfico con soporte táctil Swipe */}
         <HeroSlider onOpenContact={() => setContactOpen(true)} />
 
-        {/* 4. Cotizador Interactivo: Diseña tu Viaje a la Medida */}
-        <TripPlanner onOpenLegal={(docKey) => setActiveLegalDoc(docKey)} />
-
-        {/* 5. Cuadrícula de Paquetes Internacionales Curados */}
+        {/* 4. Cuadrícula de Paquetes Internacionales Curados */}
         <PackagesGrid 
           activeCategory={activeCategory}
           onOpenContact={() => setContactOpen(true)}
         />
 
-        {/* 6. Sección de Full Days & Escapadas Cortas */}
+        {/* 5. Sección de Full Days & Escapadas Cortas */}
         <FullDaysSection onOpenContact={() => setContactOpen(true)} />
+
+        {/* 6. Cotizador Interactivo: Diseña tu Viaje a la Medida (debajo de Full Days) */}
+        <TripPlanner onOpenLegal={(docKey) => setActiveLegalDoc(docKey)} />
 
         {/* 7. Por qué elegir Kanko Travel (Pilares de Excelencia) */}
         <FeaturesSection />

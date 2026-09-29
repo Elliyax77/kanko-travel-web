@@ -94,15 +94,16 @@ kanko-travel-web/
    - Destinos insignia (Japón Fascinante, Europa Soñada, Dubái & Maldivas, Punta Cana Todo Incluido).
    - Tag flotante de precio y duración en esquina superior derecha.
    - Botón obligatorio **"Más información"** en la **esquina inferior izquierda** conectado directamente con WhatsApp.
-4. **TripPlanner (Cotizador Interactivo a la Medida):**
-   - Selector en 3 pasos: Destino -> Época del año -> Cantidad de viajeros.
-   - **Cumplimiento legal:** Casilla de verificación activa (no pre-marcada) de aceptación de Política de Privacidad y Términos con enlace directo.
-   - Validación que impide el envío si no está marcada, mostrando advertencia visual clara.
-5. **Cuadrícula de Paquetes Internacionales:**
+4. **Cuadrícula de Paquetes Internacionales:**
    - Tarjetas modernas con relación de aspecto adaptada, etiquetas de *Vuelo incluido*, lista de inclusiones clave, precio referencial y botón de acción en esquina inferior izquierda.
    - Banner interactivo: *"¿Tienes una ruta diferente en mente? Creamos tu itinerario personalizado con plan de cuotas al 30%"*.
-6. **Full Days & Escapadas Cortas:**
+5. **Full Days & Escapadas Cortas:**
    - Tours de 1 día (Morrocoy VIP, Isla Larga y Colonia Tovar) con detalles de transporte, lanchas e hidratación.
+6. **TripPlanner (Cotizador Interactivo a la Medida):**
+   - Ubicado estratégicamente justo después de los Full Days.
+   - Selector interactivo en 3 pasos: Destino -> Época del año -> Cantidad de viajeros.
+   - **Cumplimiento legal:** Casilla de verificación activa (no pre-marcada) de aceptación de Política de Privacidad y Términos con enlace directo.
+   - Validación que impide el envío si no está marcada, mostrando advertencia visual clara.
 7. **¿Por qué viajar con Kanko Travel?:**
    - Tarjetas de respaldo: Especialistas en Rutas Mundiales, Reserva en Cuotas (30%), Seguro Internacional Schengen y Asistencia 24/7.
 8. **Métodos de Pago & Facilidades en Cuotas:**
