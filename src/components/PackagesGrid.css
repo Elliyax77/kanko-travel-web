@@ -1,0 +1,352 @@
+.kanko-packages-section {
+  padding: 2.5rem 0 3.5rem;
+  background-color: transparent;
+}
+
+.packages-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--kanko-red-light);
+  color: var(--kanko-red);
+  padding: 0.28rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--kanko-muted);
+}
+
+/* Grilla de Paquetes */
+.packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 640px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Tarjeta individual */
+.kanko-pkg-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1.5px solid var(--kanko-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kanko-pkg-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 4px 15px rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+/* Contenedor de la Imagen */
+.pkg-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--kanko-charcoal);
+}
+
+.pkg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kanko-pkg-card:hover .pkg-image {
+  transform: scale(1.06);
+}
+
+.pkg-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(9, 9, 11, 0.85) 0%,
+    rgba(9, 9, 11, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+.pkg-badge-top-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+}
+
+.badge-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  background: var(--kanko-red);
+  color: #FFFFFF;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pkg-flight-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* BOTÓN OBLIGATORIO: Inferior Izquierda */
+.pkg-action-bottom-left {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 4;
+}
+
+.pkg-btn-more {
+  padding: 0.5rem 1.05rem;
+  font-size: 0.82rem;
+}
+
+/* Cuerpo de la tarjeta */
+.pkg-content-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pkg-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.pkg-country {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--kanko-red);
+}
+
+.pkg-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--kanko-muted);
+  font-weight: 600;
+}
+
+.pkg-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.25rem;
+  line-height: 1.25;
+}
+
+.pkg-destination {
+  font-size: 0.86rem;
+  color: var(--kanko-muted);
+  margin-bottom: 1rem;
+}
+
+.pkg-highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--kanko-charcoal);
+  line-height: 1.35;
+}
+
+.item-check {
+  color: #10B981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Footer de tarjeta */
+.pkg-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--kanko-border);
+  margin-top: auto;
+}
+
+.pkg-price-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-from {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--kanko-muted);
+  font-weight: 600;
+}
+
+.price-amount {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--kanko-black);
+}
+
+.price-amount small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--kanko-muted);
+}
+
+.pkg-quote-cta {
+  background: var(--kanko-light-gray);
+  color: var(--kanko-charcoal);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--kanko-border);
+  transition: all 0.2s ease;
+}
+
+.pkg-quote-cta:hover {
+  background: var(--kanko-charcoal);
+  color: #FFFFFF;
+  border-color: var(--kanko-charcoal);
+}
+
+/* Banner de Cotización */
+.kanko-quote-banner {
+  background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.kanko-quote-banner::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .kanko-quote-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+  }
+}
+
+.quote-banner-content {
+  max-width: 620px;
+}
+
+.banner-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--kanko-gold);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.banner-title {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.banner-desc {
+  font-size: 0.92rem;
+  color: #A1A1AA;
+  line-height: 1.45;
+}
+
+.banner-cta {
+  flex-shrink: 0;
+  padding: 0.85rem 1.8rem;
+}

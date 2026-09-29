@@ -1,0 +1,18 @@
+.kanko-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  position: relative;
+}
+
+main {
+  flex: 1;
+}
+
+/* Espaciador para la barra inferior fija en móvil */
+@media (max-width: 768px) {
+  .kanko-app {
+    padding-bottom: 74px;
+  }
+}

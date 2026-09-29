@@ -1,0 +1,207 @@
+.fulldays-section {
+  padding: 3rem 0;
+  background-color: transparent;
+}
+
+.fulldays-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+}
+
+.fulldays-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--kanko-gold-light);
+  color: var(--kanko-gold-hover);
+  padding: 0.28rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.75rem;
+}
+
+.fulldays-title {
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.5rem;
+}
+
+.fulldays-desc {
+  font-size: 0.95rem;
+  color: var(--kanko-muted);
+}
+
+.fulldays-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .fulldays-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.fullday-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1.5px solid var(--kanko-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fullday-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
+.fd-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.fd-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fullday-card:hover .fd-img {
+  transform: scale(1.05);
+}
+
+.fd-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(9, 9, 11, 0.85) 0%,
+    rgba(9, 9, 11, 0.15) 50%,
+    transparent 100%
+  );
+}
+
+.fd-price-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  background: rgba(9, 9, 11, 0.85);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fd-price-num {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--kanko-gold);
+}
+
+.fd-price-text {
+  font-size: 0.68rem;
+  color: #E4E4E7;
+}
+
+.fd-bottom-action {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 4;
+}
+
+.fd-more-btn {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.78rem;
+}
+
+.fd-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fd-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--kanko-red);
+  margin-bottom: 0.35rem;
+}
+
+.fd-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.fd-inclusions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.fd-inc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--kanko-charcoal);
+  line-height: 1.35;
+}
+
+.inc-icon {
+  color: #10B981;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fd-whatsapp-btn {
+  width: 100%;
+  padding: 0.65rem;
+  background: var(--kanko-light-gray);
+  color: var(--kanko-black);
+  border: 1.5px solid var(--kanko-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.fd-whatsapp-btn:hover {
+  background: var(--kanko-red);
+  color: #FFFFFF;
+  border-color: var(--kanko-red);
+}

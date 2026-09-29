@@ -1,0 +1,74 @@
+.category-bar-wrapper {
+  padding: 0.85rem 0 0.5rem;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.category-pills-scroll {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 4px 2px;
+}
+
+.category-pills-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.55rem 1.15rem;
+  background: #FFFFFF;
+  color: var(--kanko-charcoal);
+  border: 1.5px solid var(--kanko-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.category-pill .pill-icon {
+  color: var(--kanko-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.category-pill:hover {
+  border-color: rgba(220, 38, 38, 0.4);
+  color: var(--kanko-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.12);
+}
+
+.category-pill:hover .pill-icon {
+  color: var(--kanko-red);
+  transform: scale(1.1);
+}
+
+.category-pill.active {
+  background: var(--kanko-charcoal);
+  color: #FFFFFF;
+  border-color: var(--kanko-charcoal);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.category-pill.active .pill-icon {
+  color: var(--kanko-red);
+}
+
+@media (max-width: 640px) {
+  .category-pill {
+    padding: 0.48rem 0.95rem;
+    font-size: 0.82rem;
+  }
+}

@@ -1,0 +1,219 @@
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 9, 11, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: overlayFade 0.25s ease-out;
+}
+
+@keyframes overlayFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact-card {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--kanko-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  padding: 2.2rem 1.8rem;
+  position: relative;
+  animation: cardScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes cardScale {
+  from { transform: scale(0.94) translateY(12px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.contact-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--kanko-light-gray);
+  color: var(--kanko-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-close-btn:hover {
+  background: var(--kanko-red-light);
+  color: var(--kanko-red);
+}
+
+.contact-card-header {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.contact-isotype {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--kanko-border);
+}
+
+.contact-card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.35rem;
+}
+
+.contact-card-desc {
+  font-size: 0.88rem;
+  color: var(--kanko-muted);
+  line-height: 1.4;
+}
+
+.contact-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.contact-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--kanko-border);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FFFFFF;
+  width: 100%;
+}
+
+.contact-action-btn:hover {
+  transform: translateY(-2px);
+}
+
+.contact-action-btn.primary {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  color: #FFFFFF;
+  border-color: #DC2626;
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.35);
+}
+
+.contact-action-btn.primary:hover {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  box-shadow: 0 8px 22px rgba(220, 38, 38, 0.45);
+}
+
+.contact-action-btn.primary .btn-sub-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contact-action-btn.secondary {
+  background: var(--kanko-charcoal);
+  color: #FFFFFF;
+  border-color: var(--kanko-charcoal);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.contact-action-btn.secondary:hover {
+  background: var(--kanko-black);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.contact-action-btn.secondary .btn-sub-label {
+  color: #A1A1AA;
+}
+
+.contact-action-btn.neutral {
+  color: var(--kanko-black);
+}
+
+.contact-action-btn.neutral:hover {
+  border-color: var(--kanko-red);
+  background: var(--kanko-light-gray);
+}
+
+.btn-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-action-btn.primary .btn-icon-wrapper {
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.contact-action-btn.secondary .btn-icon-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.call-icon {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.ig-icon {
+  background: #FDF2F8;
+  color: #DB2777;
+}
+
+.btn-label-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.btn-main-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn-sub-label {
+  font-size: 0.78rem;
+  color: var(--kanko-muted);
+}
+
+.btn-send-icon {
+  opacity: 0.8;
+}
+
+.contact-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--kanko-muted);
+  text-align: center;
+}
+
+.pin-icon {
+  color: var(--kanko-red);
+  flex-shrink: 0;
+}

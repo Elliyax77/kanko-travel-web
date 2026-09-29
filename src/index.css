@@ -1,0 +1,195 @@
+:root {
+  /* Paleta Oficial Kanko Travel (観光) */
+  --kanko-red: #DC2626;
+  --kanko-red-hover: #B91C1C;
+  --kanko-red-dark: #991B1B;
+  --kanko-red-light: #FEE2E2;
+  --kanko-red-glow: rgba(220, 38, 38, 0.35);
+  
+  /* Tonalidades de Tinta Japonesa (Sumi / Charcoal / Jet Black) */
+  --kanko-black: #09090B;
+  --kanko-charcoal: #18181B;
+  --kanko-slate: #27272A;
+  --kanko-muted: #71717A;
+  --kanko-light-gray: #F4F4F5;
+  --kanko-border: #E4E4E7;
+  --kanko-white: #FFFFFF;
+
+  /* Acento Oro / Sol Naciente */
+  --kanko-gold: #F59E0B;
+  --kanko-gold-hover: #D97706;
+  --kanko-gold-light: #FEF3C7;
+
+  /* Fondo de la Web */
+  --bg-canvas: #F8F9FA;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFFFFF;
+  
+  /* Header Kanko */
+  --header-bg: #FFFFFF;
+  --header-bg-scrolled: rgba(255, 255, 255, 0.96);
+  --header-border: rgba(228, 228, 231, 0.9);
+  --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --header-shadow-scrolled: 0 8px 30px rgba(0, 0, 0, 0.09);
+
+  /* Tipografías */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Sombras de lujo */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+  --shadow-crimson: 0 8px 24px -2px rgba(220, 38, 38, 0.4);
+  --shadow-card: 0 10px 30px -5px rgba(24, 24, 27, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+
+  /* Curvaturas */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  --radius-full: 9999px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--kanko-black);
+  background-color: var(--bg-canvas);
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(220, 38, 38, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(24, 24, 27, 0.03) 0%, transparent 50%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--kanko-black);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--kanko-muted);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-heading);
+}
+
+/* Contenedor adaptativo */
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Botón Principal Carmesí Kanko */
+.btn-kanko-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-crimson);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-kanko-primary:hover {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -2px rgba(220, 38, 38, 0.5);
+}
+
+.btn-kanko-primary:active {
+  transform: translateY(0);
+}
+
+/* Botón Oscuro Elegante */
+.btn-kanko-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--kanko-charcoal);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-kanko-dark:hover {
+  background-color: var(--kanko-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón 'Más información' Kanko */
+.btn-kanko-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 5;
+}
+
+.btn-kanko-action:hover {
+  background: #FFFFFF;
+  color: var(--kanko-red);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.55);
+}
+
+.btn-kanko-action:active {
+  transform: translateY(0) scale(0.98);
+}

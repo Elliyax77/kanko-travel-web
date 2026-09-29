@@ -1,0 +1,170 @@
+.payments-section {
+  padding: 3rem 0 4rem;
+  background-color: transparent;
+}
+
+.payments-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+.payments-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--kanko-red-light);
+  color: var(--kanko-red);
+  padding: 0.28rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.75rem;
+}
+
+.payments-title {
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.5rem;
+}
+
+.payments-desc {
+  font-size: 0.95rem;
+  color: var(--kanko-muted);
+}
+
+.payments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .payments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .payments-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.payment-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1.5px solid var(--kanko-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(220, 38, 38, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.pm-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.pm-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--kanko-light-gray);
+  color: var(--kanko-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-card:hover .pm-icon-box {
+  background: var(--kanko-red-light);
+  color: var(--kanko-red);
+}
+
+.pm-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--kanko-muted);
+  background: var(--kanko-light-gray);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.pm-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.35rem;
+}
+
+.pm-desc {
+  font-size: 0.85rem;
+  color: var(--kanko-muted);
+  line-height: 1.4;
+}
+
+/* Box de Cuotas */
+.cuotas-highlight-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 2.2rem 1.8rem;
+  border: 1.5px solid rgba(220, 38, 38, 0.25);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .cuotas-highlight-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2.8rem;
+  }
+}
+
+.cuotas-content {
+  max-width: 680px;
+}
+
+.cuotas-tag {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--kanko-red);
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.cuotas-title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: var(--kanko-black);
+  margin-bottom: 0.5rem;
+}
+
+.cuotas-desc {
+  font-size: 0.92rem;
+  color: var(--kanko-muted);
+  line-height: 1.5;
+}
+
+.cuotas-cta {
+  flex-shrink: 0;
+  padding: 0.8rem 1.6rem;
+}

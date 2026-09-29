@@ -1,0 +1,185 @@
+.kanko-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  overflow-anchor: none;
+  transform: translateZ(0);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--header-shadow);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0.65rem 0;
+}
+
+.kanko-header.scrolled {
+  background: var(--header-bg-scrolled);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.15);
+  box-shadow: var(--header-shadow-scrolled);
+  padding: 0.42rem 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Enlace y dimensiones del Logo */
+.kanko-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.kanko-logo-link:hover {
+  transform: scale(1.02);
+}
+
+.kanko-logo-img {
+  height: 64px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply; /* Asegura integración perfecta con fondo blanco */
+  transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kanko-header.scrolled .kanko-logo-img {
+  height: 50px;
+}
+
+/* Badge central de estatus */
+.header-status-badge {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: rgba(244, 244, 245, 0.9);
+  border: 1px solid rgba(228, 228, 231, 0.9);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--kanko-charcoal);
+  letter-spacing: 0.2px;
+}
+
+@media (min-width: 900px) {
+  .header-status-badge {
+    display: inline-flex;
+  }
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.2, 1);
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Acciones a la derecha */
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-kanko-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.58rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-kanko-contact:hover {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.48);
+}
+
+.btn-kanko-contact:active {
+  transform: translateY(0);
+}
+
+/* Botón de Menú Kanko */
+.btn-kanko-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: #FFFFFF;
+  color: var(--kanko-black);
+  border-radius: 50%;
+  border: 1.5px solid var(--kanko-border);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-kanko-menu:hover {
+  background: var(--kanko-light-gray);
+  border-color: var(--kanko-red);
+  color: var(--kanko-red);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.15);
+}
+
+.btn-kanko-menu:active {
+  transform: translateY(0) scale(0.96);
+}
+
+/* Ajustes Responsive para Móviles */
+@media (max-width: 640px) {
+  .kanko-logo-img {
+    height: 48px;
+    max-width: 190px;
+  }
+
+  .kanko-header.scrolled .kanko-logo-img {
+    height: 40px;
+  }
+
+  /* En móviles ocultamos el texto del botón y dejamos solo el icono o lo simplificamos */
+  .btn-kanko-contact {
+    padding: 0.52rem 0.95rem;
+    font-size: 0.84rem;
+    gap: 6px;
+  }
+
+  .btn-kanko-menu {
+    width: 38px;
+    height: 38px;
+  }
+}
