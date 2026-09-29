@@ -82,7 +82,7 @@ kanko-travel-web/
 
 ## Secciones y Elementos de la Web (en orden de navegación)
 1. **Header Kanko:**
-   - Logotipo oficial de Kanko Travel a la izquierda.
+   - Logotipo oficial de Kanko Travel a la izquierda: recortado de márgenes blancos y ampliado (88px en desktop / 70px en smartphones y 68px/54px en modo scrolled) para un impacto visual imponente y legible.
    - A la derecha: Botón directo Carmesí de **Cotizar Viaje** + Botón de Menú circular estilizado.
    - Algoritmo de scroll estabilizado con histéresis (compacta a 60px y expande a 15px, con `overflow-anchor: none`).
 2. **CategoryBar (Barra de Categorías Swipeable):**

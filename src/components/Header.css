@@ -42,17 +42,17 @@
 }
 
 .kanko-logo-img {
-  height: 64px;
+  height: 88px;
   width: auto;
-  max-width: 280px;
+  max-width: 320px;
   object-fit: contain;
   display: block;
-  mix-blend-mode: multiply; /* Asegura integración perfecta con fondo blanco */
+  mix-blend-mode: multiply; /* Integración limpia sobre fondo blanco */
   transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .kanko-header.scrolled .kanko-logo-img {
-  height: 50px;
+  height: 68px;
 }
 
 /* Acciones a la derecha */
@@ -121,15 +121,15 @@
 /* Ajustes Responsive para Móviles */
 @media (max-width: 640px) {
   .kanko-logo-img {
-    height: 48px;
-    max-width: 190px;
+    height: 70px;
+    max-width: 250px;
   }
 
   .kanko-header.scrolled .kanko-logo-img {
-    height: 40px;
+    height: 54px;
   }
 
-  /* En móviles ocultamos el texto del botón y dejamos solo el icono o lo simplificamos */
+  /* En móviles ajustamos el botón para mayor proporción */
   .btn-kanko-contact {
     padding: 0.52rem 0.95rem;
     font-size: 0.84rem;
@@ -139,5 +139,16 @@
   .btn-kanko-menu {
     width: 38px;
     height: 38px;
+  }
+}
+
+@media (max-width: 420px) {
+  .kanko-logo-img {
+    height: 60px;
+    max-width: 210px;
+  }
+
+  .kanko-header.scrolled .kanko-logo-img {
+    height: 48px;
   }
 }
