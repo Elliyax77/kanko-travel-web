@@ -15,6 +15,9 @@ Sitio web oficial de **Kanko Travel — Agencia de Viajes** (観光, *Kankō* si
 
 La plataforma está construida con una filosofía estricta **Mobile-First**, garantizando que los usuarios que navegan desde teléfonos celulares vivan una experiencia fluida, rápida y con conversión directa a WhatsApp en un solo clic.
 
+- **Repositorio oficial en GitHub:** [https://github.com/Elliyax77/kanko-travel-web](https://github.com/Elliyax77/kanko-travel-web)
+- **Rama principal:** `main`
+
 ---
 
 ## Stack tecnológico
