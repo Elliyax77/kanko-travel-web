@@ -75,13 +75,20 @@ const ContactModal = ({ isOpen, onClose, onOpenLegal }) => {
           )}
         </div>
 
-        <div className="contact-options-list">
+        <div 
+          className="contact-options-list"
+          onClick={() => {
+            if (!privacyAccepted) setShowError(true);
+          }}
+        >
           
           {/* Opción 1: WhatsApp Paquetes */}
           <button 
             type="button" 
-            className="contact-action-btn primary"
+            className={`contact-action-btn primary ${!privacyAccepted ? 'is-disabled' : ''}`}
             onClick={() => openWhatsApp("Paquetes Internacionales y Vacaciones")}
+            disabled={!privacyAccepted}
+            title={!privacyAccepted ? "Acepta la política de privacidad arriba para chatear" : "Chatear por WhatsApp"}
           >
             <div className="btn-icon-wrapper wa-icon">
               <MessageCircle size={22} />
@@ -96,8 +103,10 @@ const ContactModal = ({ isOpen, onClose, onOpenLegal }) => {
           {/* Opción 2: WhatsApp Boletos Aéreos */}
           <button 
             type="button" 
-            className="contact-action-btn secondary"
+            className={`contact-action-btn secondary ${!privacyAccepted ? 'is-disabled' : ''}`}
             onClick={() => openWhatsApp("Boletos Aéreos y Cotización de Vuelos")}
+            disabled={!privacyAccepted}
+            title={!privacyAccepted ? "Acepta la política de privacidad arriba para chatear" : "Chatear por WhatsApp"}
           >
             <div className="btn-icon-wrapper flight-icon">
               <Plane size={22} />

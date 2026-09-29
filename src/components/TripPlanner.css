@@ -232,14 +232,38 @@
   max-width: 440px;
 }
 
-.btn-planner-send:hover {
+.btn-planner-send:not(:disabled):hover {
   background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(220, 38, 38, 0.5);
 }
 
-.btn-planner-send:active {
+.btn-planner-send:not(:disabled):active {
   transform: translateY(0);
+}
+
+/* Estado deshabilitado mientras no se acepte la casilla */
+.btn-planner-send:disabled,
+.btn-planner-send.is-disabled {
+  background: #E4E4E7 !important;
+  color: #71717A !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  opacity: 0.8;
+  border: 1px solid #D4D4D8;
+}
+
+.planner-lock-warning {
+  font-size: 0.84rem;
+  color: #DC2626;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  animation: fadeIn 0.2s ease-out;
 }
 
 .planner-subnote {

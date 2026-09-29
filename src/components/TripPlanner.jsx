@@ -179,19 +179,34 @@ const TripPlanner = ({ onOpenLegal }) => {
             )}
           </div>
 
-          {/* Botón de envío a WhatsApp */}
-          <div className="planner-action-box">
+          {/* Botón de envío a WhatsApp (Deshabilitado mientras no se acepte) */}
+          <div 
+            className="planner-action-box"
+            onClick={() => {
+              if (!privacyAccepted) setShowError(true);
+            }}
+          >
             <button
               type="button"
-              className="btn-planner-send"
+              className={`btn-planner-send ${!privacyAccepted ? 'is-disabled' : ''}`}
               onClick={handleGenerateQuote}
+              disabled={!privacyAccepted}
+              aria-disabled={!privacyAccepted}
+              title={!privacyAccepted ? 'Debes marcar la casilla arriba para habilitar la cotización' : 'Solicitar Cotización por WhatsApp'}
             >
               <Send size={18} />
               <span>Solicitar Cotización por WhatsApp</span>
             </button>
-            <p className="planner-subnote">
-              🔒 Respuesta rápida sin compromiso • Asesoría 100% personalizada
-            </p>
+            
+            {!privacyAccepted ? (
+              <p className="planner-lock-warning">
+                🔒 Debes aceptar la casilla de arriba para habilitar la cotización
+              </p>
+            ) : (
+              <p className="planner-subnote">
+                🔒 Respuesta rápida sin compromiso • Asesoría 100% personalizada
+              </p>
+            )}
           </div>
 
         </div>

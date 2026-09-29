@@ -151,6 +151,23 @@
   background: var(--kanko-light-gray);
 }
 
+/* Estado deshabilitado si no se acepta la privacidad */
+.contact-action-btn:disabled,
+.contact-action-btn.is-disabled {
+  opacity: 0.55 !important;
+  filter: grayscale(0.7) !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  transform: none !important;
+  background: var(--kanko-light-gray) !important;
+  border-color: var(--border-color) !important;
+  color: var(--kanko-muted) !important;
+}
+
+.contact-action-btn.is-disabled .btn-sub-label {
+  color: #9CA3AF !important;
+}
+
 .btn-icon-wrapper {
   width: 42px;
   height: 42px;

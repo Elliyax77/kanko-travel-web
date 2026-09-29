@@ -102,8 +102,8 @@ kanko-travel-web/
 6. **TripPlanner (Cotizador Interactivo a la Medida):**
    - Ubicado estratégicamente justo después de los Full Days.
    - Selector interactivo en 3 pasos: Destino -> Época del año -> Cantidad de viajeros.
-   - **Cumplimiento legal:** Casilla de verificación activa (no pre-marcada) de aceptación de Política de Privacidad y Términos con enlace directo.
-   - Validación que impide el envío si no está marcada, mostrando advertencia visual clara.
+   - **Cumplimiento legal y bloqueo estricto:** Casilla de verificación activa (no pre-marcada) de aceptación de Política de Privacidad y Términos con enlace directo.
+   - **Botón de cotización deshabilitado:** El botón "Solicitar Cotización por WhatsApp" permanece en estado inactivo/deshabilitado (gris neutro, cursor `not-allowed`, sin degradado carmesí ni sombras) y con el texto `🔒 Debes aceptar la casilla de arriba para habilitar la cotización`. Solo se transforma en el botón carmesí activo una vez que el usuario marca activamente la casilla. Si el usuario intenta hacer clic antes, se dispara una alerta visual destacando la casilla obligatoria.
 7. **¿Por qué viajar con Kanko Travel?:**
    - Tarjetas de respaldo: Especialistas en Rutas Mundiales, Reserva en Cuotas (30%), Seguro Internacional Schengen y Asistencia 24/7.
 8. **Métodos de Pago & Facilidades en Cuotas:**
