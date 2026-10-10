@@ -31,10 +31,8 @@
 }
 
 .section-subtitle {
-  font-size: 0.98rem;
-  color: var(--kanko-black);
-  font-weight: 600;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  color: var(--kanko-muted);
 }
 
 /* Grilla de Paquetes */
@@ -204,8 +202,7 @@
 
 .pkg-destination {
   font-size: 0.86rem;
-  color: var(--kanko-black);
-  font-weight: 600;
+  color: var(--kanko-muted);
   margin-bottom: 1rem;
 }
 

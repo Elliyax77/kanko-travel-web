@@ -31,10 +31,8 @@
 }
 
 .features-desc {
-  font-size: 0.98rem;
-  color: var(--kanko-black);
-  font-weight: 600;
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  color: var(--kanko-muted);
 }
 
 .features-grid {
@@ -101,6 +99,6 @@
 
 .feature-explanation {
   font-size: 0.88rem;
-  color: var(--kanko-black);
+  color: var(--kanko-muted);
   line-height: 1.45;
 }

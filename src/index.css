@@ -10,7 +10,7 @@
   --kanko-black: #09090B;
   --kanko-charcoal: #18181B;
   --kanko-slate: #27272A;
-  --kanko-muted: #18181B;
+  --kanko-muted: #71717A;
   --kanko-light-gray: #F4F4F5;
   --kanko-border: #E4E4E7;
   --kanko-white: #FFFFFF;
@@ -21,12 +21,12 @@
   --kanko-gold-light: #FEF3C7;
 
   /* Fondo de la Web */
-  --bg-canvas: #FFF6F6;
+  --bg-canvas: #F8F9FA;
   --bg-card: #FFFFFF;
   --bg-card-hover: #FFFFFF;
   
   /* Header Kanko */
-  --header-bg: rgba(255, 255, 255, 0.88);
+  --header-bg: #FFFFFF;
   --header-bg-scrolled: rgba(255, 255, 255, 0.96);
   --header-border: rgba(228, 228, 231, 0.9);
   --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -69,15 +69,13 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--kanko-black);
-  background-color: #FFFFFF;
+  background-color: var(--bg-canvas);
   background-image: 
-    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.5) 100%),
-    url('/kanko-bg-waves.jpg');
+    radial-gradient(circle at 15% 10%, rgba(220, 38, 38, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(24, 24, 27, 0.03) 0%, transparent 50%);
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background-size: 100% 100%;
   line-height: 1.5;
   overflow-x: hidden;
   max-width: 100%;
@@ -95,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  color: var(--kanko-black);
+  color: var(--kanko-muted);
 }
 
 a {
