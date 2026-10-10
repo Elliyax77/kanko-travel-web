@@ -21,7 +21,7 @@
   --kanko-gold-light: #FEF3C7;
 
   /* Fondo de la Web */
-  --bg-canvas: #F8F9FA;
+  --bg-canvas: #FFF6F6;
   --bg-card: #FFFFFF;
   --bg-card-hover: #FFFFFF;
   
@@ -71,11 +71,12 @@ body {
   color: var(--kanko-black);
   background-color: var(--bg-canvas);
   background-image: 
-    radial-gradient(circle at 15% 10%, rgba(220, 38, 38, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 85% 60%, rgba(245, 158, 11, 0.03) 0%, transparent 45%),
-    radial-gradient(circle at 50% 90%, rgba(24, 24, 27, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse 90% 40% at 50% 0%, rgba(220, 38, 38, 0.06) 0%, transparent 60%),
+    linear-gradient(175deg, #FFFFFF 0%, #FFF5F5 18%, #FEE5E5 48%, #FFF0F1 80%, #FFFFFF 100%);
   background-attachment: fixed;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
   max-width: 100%;

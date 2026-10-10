@@ -42,8 +42,8 @@ Inspirada en el isotipo oficial con el Kanji rojo **旅** (*Tabi*, travesía/via
 - **Tinta Sumi / Jet Black:** `#09090B` (elegancia, fondos de contraste, footer y acentos de lujo)
 - **Charcoal / Pizarra Oscuro:** `#18181B` a `#27272A` (tarjetas dark, texto principal)
 - **Oro Sol Naciente:** `#F59E0B` (acentos VIP, etiquetas de precio y elementos estelares)
-- **Fondo Lienzo Seda:** `#F8F9FA` con sutiles degradados radiales translúcidos en rojo y carbón.
-- **Blanco Puro:** `#FFFFFF` (tarjetas con sombras refinadas y cabecera limpia).
+- **Fondo Lienzo Seda & Gradiente Carmesí Sutil:** `#FFF6F6` con degradado profesional de blanco a rojo carmesí sutil (`linear-gradient(175deg, #FFFFFF 0%, #FFF5F5 18%, #FEE5E5 48%, #FFF0F1 80%, #FFFFFF 100%)`) y aura radial superior (`rgba(220, 38, 38, 0.06)`), brindando profundidad elegante y limpia sin sobrecargar.
+- **Blanco Puro:** `#FFFFFF` (tarjetas con sombras refinadas, píldoras de navegación y cabecera limpia).
 
 ---
 
