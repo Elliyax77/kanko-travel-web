@@ -62,7 +62,8 @@
 
 .planner-desc {
   font-size: 0.95rem;
-  color: var(--kanko-muted);
+  color: var(--kanko-black);
+  font-weight: 500;
 }
 
 .planner-steps-grid {

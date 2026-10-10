@@ -10,7 +10,7 @@
   --kanko-black: #09090B;
   --kanko-charcoal: #18181B;
   --kanko-slate: #27272A;
-  --kanko-muted: #71717A;
+  --kanko-muted: #18181B;
   --kanko-light-gray: #F4F4F5;
   --kanko-border: #E4E4E7;
   --kanko-white: #FFFFFF;
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  color: var(--kanko-muted);
+  color: var(--kanko-black);
 }
 
 a {
