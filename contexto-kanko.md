@@ -42,7 +42,7 @@ Inspirada en el isotipo oficial con el Kanji rojo **旅** (*Tabi*, travesía/via
 - **Tinta Sumi / Jet Black:** `#09090B` (elegancia, fondos de contraste, footer y acentos de lujo)
 - **Charcoal / Pizarra Oscuro:** `#18181B` a `#27272A` (tarjetas dark, texto principal)
 - **Oro Sol Naciente:** `#F59E0B` (acentos VIP, etiquetas de precio y elementos estelares)
-- **Fondo Lienzo Seda & Gradiente Carmesí Sutil:** `#FFF6F6` con degradado profesional de blanco a rojo carmesí sutil (`linear-gradient(175deg, #FFFFFF 0%, #FFF5F5 18%, #FEE5E5 48%, #FFF0F1 80%, #FFFFFF 100%)`) y aura radial superior (`rgba(220, 38, 38, 0.06)`), brindando profundidad elegante y limpia sin sobrecargar.
+- **Fondo Seda en Ondas Fluidas (Grain Mesh Wave):** Fondo texturizado de ondas fluidas carmesí y blanco seda (`kanko-bg-waves.jpg`) con sutil grano mate, acompañado de un gradiente translúcido de protección de lectura (`linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.5) 100%)`) y fijación `background-attachment: fixed`.
 - **Blanco Puro:** `#FFFFFF` (tarjetas con sombras refinadas, píldoras de navegación y cabecera limpia).
 
 ---
@@ -51,6 +51,7 @@ Inspirada en el isotipo oficial con el Kanji rojo **旅** (*Tabi*, travesía/via
 ```
 kanko-travel-web/
 ├── public/
+│   ├── kanko-bg-waves.jpg       ← Fondo oficial de ondas fluidas carmesí y blanco seda con grano texturizado
 │   ├── kanko-logo.png           ← Logotipo oficial horizontal Kanko Travel (globo terráqueo a la izquierda y texto a la derecha)
 │   ├── kanko-isotype.jpg        ← Isotipo circular oficial (kanji rojo 旅 en globo terráqueo)
 │   ├── favicon.png              ← Isotipo para favicon del navegador

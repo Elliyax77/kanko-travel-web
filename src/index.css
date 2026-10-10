@@ -26,7 +26,7 @@
   --bg-card-hover: #FFFFFF;
   
   /* Header Kanko */
-  --header-bg: #FFFFFF;
+  --header-bg: rgba(255, 255, 255, 0.88);
   --header-bg-scrolled: rgba(255, 255, 255, 0.96);
   --header-border: rgba(228, 228, 231, 0.9);
   --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -69,12 +69,13 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--kanko-black);
-  background-color: var(--bg-canvas);
+  background-color: #FFFFFF;
   background-image: 
-    radial-gradient(ellipse 90% 40% at 50% 0%, rgba(220, 38, 38, 0.06) 0%, transparent 60%),
-    linear-gradient(175deg, #FFFFFF 0%, #FFF5F5 18%, #FEE5E5 48%, #FFF0F1 80%, #FFFFFF 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.25) 80%, rgba(255, 255, 255, 0.5) 100%),
+    url('/kanko-bg-waves.jpg');
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
   min-height: 100vh;
   line-height: 1.5;
